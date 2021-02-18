@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+<div class="container py-4">
+    <ul id="problem-list" class="list-group">
+        {% for problem in problems %}
+            <li class="list-group-item list-group-item-action">
+                <a href="{{problem.get_absolute_url}}" class="text-decoration-none">
+                    <h5 class="text-dark"><strong>{{problem.title}}</strong>
+                        
+                    </h5>
+                </a>
+            </li>
+        {% endfor %}
+    </div>
+</div>
+    
+
+{% endblock %}
